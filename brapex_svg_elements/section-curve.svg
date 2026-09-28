@@ -1,0 +1,47 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1000 900"
+  preserveAspectRatio="none"
+  fill="none"
+>
+  <defs>
+    <linearGradient
+      id="contact-background"
+      x1="90"
+      y1="40"
+      x2="690"
+      y2="850"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#07503E" />
+      <stop offset="0.72" stop-color="#032D24" />
+      <stop offset="1" stop-color="#021F19" />
+    </linearGradient>
+    <radialGradient
+      id="contact-light"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(565 155) rotate(128) scale(360 330)"
+    >
+      <stop stop-color="#238B69" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#238B69" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <path
+    d="M0 0H760C706 142 654 296 601 454C535 651 469 801 360 900H0V0Z"
+    fill="url(#contact-background)"
+  />
+  <path
+    d="M0 0H760C706 142 654 296 601 454C535 651 469 801 360 900H0V0Z"
+    fill="url(#contact-light)"
+  />
+  <path
+    d="M760 0C706 142 654 296 601 454C535 651 469 801 360 900"
+    stroke="#E6B83F"
+    stroke-width="8"
+    vector-effect="non-scaling-stroke"
+  />
+</svg>
