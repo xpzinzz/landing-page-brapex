@@ -47,6 +47,28 @@
     <symbol id="icon-chart" viewBox="0 0 24 24">
       <path d="M4 19V9M10 19V5M16 19v-7M22 19V3"></path>
     </symbol>
+    <symbol id="icon-leaf" viewBox="0 0 24 24">
+      <path d="M20 4c-8 0-14 3-14 10a6 6 0 0 0 6 6c7 0 8-8 8-16Z"></path>
+      <path d="M4 21c3-5 7-8 12-11"></path>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+      <circle cx="12" cy="10" r="2.5"></circle>
+    </symbol>
+    <symbol id="icon-coins" viewBox="0 0 24 24">
+      <ellipse cx="9" cy="5" rx="6" ry="3"></ellipse>
+      <path d="M3 5v5c0 1.7 2.7 3 6 3 1 0 1.9-.1 2.7-.4M3 10v5c0 1.7 2.7 3 6 3 1 0 1.9-.1 2.7-.4M15 13c3.3 0 6 1.3 6 3s-2.7 3-6 3-6-1.3-6-3 2.7-3 6-3Zm-6 3v3c0 1.7 2.7 3 6 3s6-1.3 6-3v-3"></path>
+    </symbol>
+    <symbol id="icon-trend" viewBox="0 0 24 24">
+      <path d="M3 20V5M3 20h18M6 15l5-5 4 3 6-7M16 6h5v5"></path>
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M12 11v5M12 8h.01"></path>
+    </symbol>
+    <symbol id="icon-report" viewBox="0 0 24 24">
+      <path d="M6 3h9l4 4v14H6zM15 3v5h5M9 12h7M9 16h7"></path>
+    </symbol>
     <symbol id="icon-calendar" viewBox="0 0 24 24">
       <rect x="3" y="5" width="18" height="16" rx="2"></rect>
       <path d="M16 3v4M8 3v4M3 11h18M8 15h.01M12 15h.01M16 15h.01"></path>
@@ -91,11 +113,19 @@
     <div class="container header__inner">
       <a class="brand" href="index.html" aria-label="BRAPEX, página inicial">
         <img
-          class="brand__logo"
-          src="assets/images/logo-principal-horizontal.webp"
+          class="brand__logo brand__logo--hero"
+          src="assets/images/logo-principal-horizonta-brancol.webp"
           alt="BRAPEX — Associação Brasileira dos Produtores e Exportadores de Papaya"
           width="2172"
           height="724"
+        />
+        <img
+          class="brand__logo brand__logo--scrolled"
+          src="assets/images/logo-principal-horizontal.webp"
+          alt=""
+          width="2172"
+          height="724"
+          aria-hidden="true"
         />
       </a>
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
@@ -294,7 +324,7 @@
         <div class="section-heading section-heading--row">
           <div>
             <p class="eyebrow eyebrow--green">Inteligência de mercado</p>
-            <h2>Cotação atual do mamão</h2>
+            <h2>Cotação atual do <strong>mamão</strong></h2>
           </div>
           <p class="updated">
             <span class="status-dot"></span>
@@ -307,17 +337,19 @@
               <table>
                 <thead>
                   <tr>
-                    <th>Produto</th>
-                    <th>Mercado</th>
-                    <th>R$/kg</th>
-                    <th>Variação</th>
+                    <th><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg> Produto</th>
+                    <th><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg> Mercado</th>
+                    <th><svg class="icon" aria-hidden="true"><use href="#icon-coins"></use></svg> R$/kg</th>
+                    <th><svg class="icon" aria-hidden="true"><use href="#icon-trend"></use></svg> Variação</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <strong>Mamão Formosa</strong>
-                      <small>05 a 09 frutos</small>
+                      <span class="quote-product">
+                        <img class="quote-product__thumb" src="assets/images/papaya-close.webp" alt="" width="120" height="80" loading="lazy" />
+                        <span><strong>Mamão Formosa</strong><small>05 a 09 frutos</small></span>
+                      </span>
                     </td>
                     <td>CEAGESP/SP</td>
                     <td><strong>R$ 5,77</strong></td>
@@ -325,8 +357,10 @@
                   </tr>
                   <tr>
                     <td>
-                      <strong>Mamão Havaí</strong>
-                      <small>15 a 18 frutos</small>
+                      <span class="quote-product">
+                        <img class="quote-product__thumb" src="assets/images/papaya-close.webp" alt="" width="120" height="80" loading="lazy" />
+                        <span><strong>Mamão Havaí</strong><small>15 a 18 frutos</small></span>
+                      </span>
                     </td>
                     <td>CEAGESP/SP</td>
                     <td><strong>R$ 4,10</strong></td>
@@ -334,8 +368,10 @@
                   </tr>
                   <tr>
                     <td>
-                      <strong>Formosa Extra</strong>
-                      <small>Atacado</small>
+                      <span class="quote-product">
+                        <img class="quote-product__thumb" src="assets/images/papaya-close.webp" alt="" width="120" height="80" loading="lazy" />
+                        <span><strong>Formosa Extra</strong><small>Atacado</small></span>
+                      </span>
                     </td>
                     <td>Campinas/SP</td>
                     <td><strong>R$ 7,00</strong></td>
@@ -345,7 +381,7 @@
               </table>
             </div>
             <div class="quote-source">
-              <p>
+              <p><svg class="icon" aria-hidden="true"><use href="#icon-info"></use></svg>
                 Valores de atacado, não correspondem necessariamente ao preço
                 pago ao produtor.
               </p>
@@ -359,18 +395,20 @@
             </div>
           </div>
           <aside class="market-card" id="mercado">
-            <p class="eyebrow">Panorama do setor</p>
-            <h3>Informação que fortalece decisões.</h3>
+            <p class="eyebrow"><span></span> Panorama do setor</p>
+            <h3>Informação que <em>fortalece decisões.</em></h3>
             <p>
               Acompanhe preços, tendências e movimentos do mercado para
               planejar com mais segurança.
             </p>
             <div class="market-card__numbers">
               <div>
+                <span class="market-card__metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg></span>
                 <strong>2</strong>
                 <span>variedades acompanhadas</span>
               </div>
               <div>
+                <span class="market-card__metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-report"></use></svg></span>
                 <strong>3×</strong>
                 <span>boletins por semana</span>
               </div>
