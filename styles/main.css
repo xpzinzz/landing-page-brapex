@@ -2507,7 +2507,7 @@ td small {
   max-width: 330px;
   margin: 16px 0 0;
   color: rgba(255, 255, 255, 0.64);
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   line-height: 1.7;
 }
 
@@ -2525,20 +2525,20 @@ td small {
 .footer__column {
   display: grid;
   align-content: start;
-  gap: 11px;
+  gap: 12px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
 }
 
 .footer__column nav {
   display: grid;
-  gap: 10px;
+  gap: 11px;
 }
 
 .footer__title {
   margin: 8px 0 8px !important;
   color: #fff !important;
-  font: 600 0.82rem var(--serif);
+  font: 600 0.92rem var(--serif);
   letter-spacing: 0.03em;
 }
 
@@ -2600,10 +2600,10 @@ td small {
 .footer__bottom {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.48);
-  background: rgba(0, 0, 0, 0.16);
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.22);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.66rem;
+  font-size: 0.78rem;
 }
 
 .footer__bottom .container {
@@ -2611,11 +2611,54 @@ td small {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 72px;
+  min-height: 78px;
 }
 
 .footer__bottom p {
   margin: 0;
+}
+
+.footer__bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer__dev-credit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__dev-separator {
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.footer__dev-credit p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.02em;
+}
+
+.footer__dev-link {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 0% 1.5px;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  transition:
+    color 0.25s ease,
+    background-size 0.35s ease;
+}
+
+.footer__dev-link:hover {
+  color: #ffd06b;
+  background-size: 100% 1.5px;
 }
 
 /* Página de associados */
@@ -3848,6 +3891,15 @@ td small {
     align-items: flex-start;
     flex-direction: column;
     padding-right: 68px;
+    gap: 14px;
+  }
+
+  .footer__dev-credit {
+    gap: 0;
+  }
+
+  .footer__dev-separator {
+    display: none;
   }
 
   .back-to-top {
