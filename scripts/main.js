@@ -164,64 +164,6 @@ if (hero) {
   startTimer();
 }
 
-// Cartões empilhados da Política de Gestão
-
-const policyStack = select("[data-policy-stack]");
-if (policyStack) {
-  const cards = selectAll(".folha", policyStack);
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const clamp = (value, minimum, maximum) =>
-    Math.max(minimum, Math.min(maximum, value));
-  let isVisible = true;
-  let frame = null;
-
-  const updatePolicyStack = () => {
-    frame = null;
-
-    if (!isVisible || reducedMotion.matches) {
-      cards.forEach((card) => {
-        card.style.removeProperty("transform");
-        card.style.removeProperty("filter");
-      });
-      return;
-    }
-
-    const stickyTop = Number.parseFloat(getComputedStyle(cards[0]).top) || 104;
-
-    cards.forEach((card, index) => {
-      let progress = 0;
-
-      if (index < cards.length - 1) {
-        const nextTop = cards[index + 1].getBoundingClientRect().top;
-        const margin = Number.parseFloat(getComputedStyle(card).marginBottom) || 0;
-        const travel = card.offsetHeight + margin;
-        progress = clamp((stickyTop + travel - nextTop) / travel, 0, 1);
-      }
-
-      card.style.transform = `scale(${1 - progress * 0.085})`;
-      card.style.filter = `brightness(${1 - progress * 0.34}) saturate(${1 - progress * 0.18})`;
-    });
-  };
-
-  const requestStackUpdate = () => {
-    if (frame === null) frame = window.requestAnimationFrame(updatePolicyStack);
-  };
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      isVisible = entry.isIntersecting;
-      if (isVisible) requestStackUpdate();
-    },
-    { threshold: 0 },
-  );
-
-  observer.observe(policyStack);
-  window.addEventListener("scroll", requestStackUpdate, { passive: true });
-  window.addEventListener("resize", requestStackUpdate);
-  reducedMotion.addEventListener?.("change", requestStackUpdate);
-  requestStackUpdate();
-}
-
 // Validação do formulário de contato
 
 const form = select("[data-contact-form]");
