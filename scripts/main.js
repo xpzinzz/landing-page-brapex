@@ -127,16 +127,13 @@ if (hero) {
   let timer;
 
   slides.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.setAttribute("aria-label", `Exibir destaque ${index + 1}`);
-    dot.addEventListener("click", () => showSlide(index, true));
+    const dot = document.createElement("span");
     dotsWrap.append(dot);
   });
 
-  const dots = selectAll("button", dotsWrap);
+  const dots = selectAll("span", dotsWrap);
 
-  function showSlide(index, restart = false) {
+  function showSlide(index) {
     current = (index + slides.length) % slides.length;
     slides.forEach((slide, slideIndex) =>
       slide.classList.toggle("is-active", slideIndex === current),
@@ -144,7 +141,6 @@ if (hero) {
     dots.forEach((dot, dotIndex) =>
       dot.classList.toggle("is-active", dotIndex === current),
     );
-    if (restart) startTimer();
   }
 
   function startTimer() {
@@ -154,12 +150,6 @@ if (hero) {
     }
   }
 
-  select("[data-hero-prev]", hero)?.addEventListener("click", () =>
-    showSlide(current - 1, true),
-  );
-  select("[data-hero-next]", hero)?.addEventListener("click", () =>
-    showSlide(current + 1, true),
-  );
   showSlide(0);
   startTimer();
 }
