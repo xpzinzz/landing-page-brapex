@@ -1410,6 +1410,81 @@ button {
   font: 400 clamp(0.86rem, 0.88vw, 0.98rem) / 1.42 var(--sans);
 }
 
+/* Destaques dos cards de gestao ao passar o mouse */
+
+.management-policy__item::before,
+.management-policy__item::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  content: "";
+}
+
+.management-policy__item::before {
+  background: inherit;
+}
+
+.management-policy__item::after {
+  z-index: 2;
+  border: 1px solid rgba(241, 185, 58, 0.6);
+  opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .management-policy__item,
+  .management-policy__item:last-child {
+    transition: transform 300ms ease, box-shadow 300ms ease;
+  }
+
+  .management-policy__item::before {
+    transition: transform 550ms ease;
+  }
+
+  .management-policy__item::after {
+    transition: opacity 300ms ease;
+  }
+
+  .management-policy__item .management-policy__icon {
+    transition: transform 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .management-policy__item .management-policy__content {
+    transition: transform 300ms ease;
+  }
+
+  .management-policy__item:hover {
+    box-shadow: 0 26px 52px rgba(8, 46, 67, 0.25);
+  }
+
+  .management-policy__item:hover::after {
+    opacity: 1;
+  }
+
+  .management-policy__item:hover .management-policy__icon {
+    background-color: var(--gold);
+    box-shadow: 0 12px 28px rgba(0, 26, 41, 0.24);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .management-policy__item:hover {
+    transform: translateY(-6px);
+  }
+
+  .management-policy__item:hover::before {
+    transform: scale(1.06);
+  }
+
+  .management-policy__item:hover .management-policy__icon {
+    transform: rotate(-6deg) scale(1.06);
+  }
+
+  .management-policy__item:hover .management-policy__content {
+    transform: translateY(-3px);
+  }
+}
+
 @media (max-width: 1180px) {
   .management-policy__container {
     grid-template-columns: 1fr;
