@@ -155,15 +155,11 @@
           Home
         </a>
         <a href="#sobre">Sobre a BRAPEX</a>
-        <a href="pages/associados.html">Associados</a>
         <a href="#cotacao">Cotação</a>
+        <a href="#gestao">Gestão</a>
         <a href="#contato">Contato</a>
+        <a href="pages/associados.html">Associados</a>
       </nav>
-      <a class="header-search" href="#cotacao" aria-label="Ir para cotação">
-        <svg class="icon">
-          <use href="#icon-search"></use>
-        </svg>
-      </a>
     </div>
   </header>
 
@@ -236,7 +232,7 @@
     </section>
 
     <!-- Nossa história -->
-    <section class="story-intro" aria-labelledby="story-intro-title">
+    <section class="story-intro" id="sobre" aria-labelledby="story-intro-title">
       <div class="story-intro__container">
         <div class="story-intro__content">
           <p class="story-intro__eyebrow"><span></span> Raízes que geram valor</p>
@@ -253,8 +249,8 @@
               sustentabilidade e novas oportunidades para todo o setor.
             </p>
           </div>
-          <a class="story-intro__button" href="#sobre">
-            Conheça nossa trajetória
+          <a class="story-intro__button" href="#gestao">
+            Conheça nossa gestão
             <span aria-hidden="true">
               <svg class="icon"><use href="#icon-arrow-right"></use></svg>
             </span>
@@ -286,114 +282,44 @@
       </div>
     </section>
 
-    <!-- Cotação atual -->
-    <section class="section quote-section" id="cotacao">
+    <!-- Cotação do mamão -->
+    <section class="section quote-section" id="cotacao" aria-labelledby="quote-title">
       <div class="container">
-        <div class="section-heading section-heading--row">
-          <div>
-            <p class="eyebrow eyebrow--green">Inteligência de mercado</p>
-            <h2>Cotação atual do <strong>mamão</strong></h2>
-          </div>
-          <p class="updated">
-            <span class="status-dot"></span>
-            Fechamento em 18/09/2026
-          </p>
-        </div>
-        <div class="quote-layout">
-          <div class="quote-panel">
-            <div class="table-scroll" tabindex="0" aria-label="Tabela de cotação do mamão">
-              <table>
-                <thead>
-                  <tr>
-                    <th><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg> Produto</th>
-                    <th><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg> Mercado</th>
-                    <th><svg class="icon" aria-hidden="true"><use href="#icon-coins"></use></svg> R$/kg</th>
-                    <th><svg class="icon" aria-hidden="true"><use href="#icon-trend"></use></svg> Variação</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <span class="quote-product">
-                        <img class="quote-product__thumb" src="assets/images/papaya-close.webp" alt="" width="120" height="80" loading="lazy" />
-                        <span><strong>Mamão Formosa</strong><small>05 a 09 frutos</small></span>
-                      </span>
-                    </td>
-                    <td>CEAGESP/SP</td>
-                    <td><strong>R$ 5,77</strong></td>
-                    <td><span class="variation neutral">— 0,00%</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="quote-product">
-                        <img class="quote-product__thumb" src="assets/images/papaya-close.webp" alt="" width="120" height="80" loading="lazy" />
-                        <span><strong>Mamão Havaí</strong><small>15 a 18 frutos</small></span>
-                      </span>
-                    </td>
-                    <td>CEAGESP/SP</td>
-                    <td><strong>R$ 4,10</strong></td>
-                    <td><span class="variation neutral">— 0,00%</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="quote-product">
-                        <img class="quote-product__thumb" src="assets/images/papaya-close.webp" alt="" width="120" height="80" loading="lazy" />
-                        <span><strong>Formosa Extra</strong><small>Atacado</small></span>
-                      </span>
-                    </td>
-                    <td>Campinas/SP</td>
-                    <td><strong>R$ 7,00</strong></td>
-                    <td><span class="variation neutral">— 0,00%</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="quote-source">
-              <p><svg class="icon" aria-hidden="true"><use href="#icon-info"></use></svg>
-                Valores de atacado, não correspondem necessariamente ao preço
-                pago ao produtor.
+        <header class="section-heading quote-heading">
+          <p class="eyebrow eyebrow--green">Inteligência de mercado</p>
+          <h2 id="quote-title">Cotação do <strong>Mamão</strong></h2>
+          <p class="quote-subtitle">Acompanhe os valores atualizados do mercado</p>
+        </header>
+
+        <div class="quote-panel">
+          <div class="quote-widget" aria-label="Cotação de Mamão - Ceasas">
+            <!-- Widgets Notícias Agrícolas - www.noticiasagricolas.com.br/widgets -->
+            <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=191&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=12pt&largura=80%&cortexto=333333&corcabecalho=B2C3C6&corlinha=DCE7E9&imagem=true&output=js"></script>
+            <noscript>
+              <p class="quote-widget__fallback">
+                Ative o JavaScript para visualizar a cotação atualizada.
               </p>
-              <a href="https://www.noticiasagricolas.com.br/cotacoes/frutas/mamao-ceasas" target="_blank"
-                rel="noopener noreferrer">
-                Consultar fonte completa
-                <svg class="icon">
-                  <use href="#icon-arrow-up-right"></use>
-                </svg>
-              </a>
-            </div>
+            </noscript>
           </div>
-          <aside class="market-card" id="mercado">
-            <p class="eyebrow"><span></span> Panorama do setor</p>
-            <h3>Informação que <em>fortalece decisões.</em></h3>
+
+          <footer class="quote-source">
             <p>
-              Acompanhe preços, tendências e movimentos do mercado para
-              planejar com mais segurança.
+              <svg class="icon" aria-hidden="true"><use href="#icon-info"></use></svg>
+              Fonte:
+              <a href="https://www.noticiasagricolas.com.br/cotacoes/frutas/mamao-ceasas" target="_blank"
+                rel="noopener noreferrer">Notícias Agrícolas</a>
             </p>
-            <div class="market-card__numbers">
-              <div>
-                <span class="market-card__metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg></span>
-                <strong>2</strong>
-                <span>variedades acompanhadas</span>
-              </div>
-              <div>
-                <span class="market-card__metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-report"></use></svg></span>
-                <strong>3×</strong>
-                <span>boletins por semana</span>
-              </div>
-            </div>
-            <a class="text-link" href="mailto:contato@brapex.net">
-              Receber informações
-              <svg class="icon">
-                <use href="#icon-arrow-right"></use>
-              </svg>
-            </a>
-          </aside>
+            <span class="quote-source__status">
+              <span class="status-dot" aria-hidden="true"></span>
+              Atualização automática pela fonte oficial
+            </span>
+          </footer>
         </div>
       </div>
     </section>
 
     <!-- Política de Gestão -->
-    <section class="management-policy" id="sobre" aria-labelledby="management-policy-title">
+    <section class="management-policy" id="gestao" aria-labelledby="management-policy-title">
       <div class="management-policy__container">
         <header class="management-policy__heading">
           <div class="management-policy__eyebrow">
@@ -564,6 +490,7 @@
           <a href="#sobre">Sobre a BRAPEX</a>
           <a href="pages/associados.html">Associados</a>
           <a href="#cotacao">Cotação atual</a>
+          <a href="#gestao">Gestão</a>
           <a href="#contato">Contato</a>
         </nav>
       </div>

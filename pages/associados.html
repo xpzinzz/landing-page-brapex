@@ -76,6 +76,10 @@
           d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1Z"
         ></path>
       </symbol>
+      <symbol id="icon-email" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2.5"></rect>
+        <path d="m5 7 7 6 7-6"></path>
+      </symbol>
       <symbol id="icon-linkedin" viewBox="0 0 24 24">
         <rect x="3" y="9" width="4" height="12"></rect>
         <path
@@ -127,20 +131,13 @@
         <nav class="main-nav" aria-label="Navegação principal" data-menu>
           <a href="../index.html">Home</a>
           <a href="../index.html#sobre">Sobre a BRAPEX</a>
+          <a href="../index.html#cotacao">Cotação</a>
+          <a href="../index.html#gestao">Gestão</a>
+          <a href="../index.html#contato">Contato</a>
           <a class="is-active" href="associados.html" aria-current="page">
             Associados
           </a>
-          <a href="../index.html#cotacao">Cotação</a>
-          <a href="../index.html#eventos">Eventos</a>
-          <a href="../index.html#contato">Contato</a>
         </nav>
-        <a
-          class="header-search"
-          href="#lista-associados"
-          aria-label="Buscar associado"
-        >
-          <svg class="icon"><use href="#icon-search"></use></svg>
-        </a>
       </div>
     </header>
 
@@ -230,9 +227,9 @@
             </label>
           </div>
           <p class="results-count" role="status" data-results-count>
-            11 associados encontrados
+            3 associados encontrados
           </p>
-          <div class="associates__grid" data-associate-grid>
+          <div class="associates__grid associates__grid--compact" data-associate-grid>
             <article
               class="associate-card"
               data-name="AGC Frutas"
@@ -248,134 +245,56 @@
                 />
               </div>
               <h2>AGC Frutas</h2>
-              <p>Produção e exportação de mamão e outras frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#" aria-label="WhatsApp da AGC Frutas">
+              <p>
+                Cultivo e fornecimento de mamão papaya, mamão formosa e melão,
+                com qualidade e rastreabilidade do campo à entrega, no Brasil e
+                no exterior.
+              </p>
+              <div class="associate-card__links associate-card__links--five">
+                <a
+                  href="https://wa.me/5527997911745"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp da AGC Frutas: (27) 99791-1745"
+                >
                   <svg class="icon"><use href="#icon-message"></use></svg>
                   <small>WhatsApp</small>
                 </a>
-                <a href="#" aria-label="Site da AGC Frutas">
+                <a
+                  href="https://agcfrutas.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Site da AGC Frutas"
+                >
                   <svg class="icon"><use href="#icon-globe"></use></svg>
                   <small>Site</small>
                 </a>
-                <a href="#" aria-label="Instagram da AGC Frutas">
+                <a
+                  href="https://www.instagram.com/agc.frutas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram da AGC Frutas"
+                >
                   <svg class="icon"><use href="#icon-instagram"></use></svg>
                   <small>Instagram</small>
                 </a>
-                <a href="#" aria-label="Facebook da AGC Frutas">
+                <a
+                  href="https://www.facebook.com/frutasagc/?locale=pt_BR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook da AGC Frutas"
+                >
                   <svg class="icon"><use href="#icon-facebook"></use></svg>
                   <small>Facebook</small>
                 </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Bello Frutas"
-              data-segment="exportador"
-            >
-              <div class="associate-card__logo">
-                <img
-                  src="../assets/images/associados/bello-fruit.webp"
-                  alt="Logo Bello Frutas"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Bello Frutas</h2>
-              <p>Exportação de frutas exóticas e tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
+                <a
+                  href="mailto:contato@agcfrutas.com.br"
+                  aria-label="E-mail da AGC Frutas: contato@agcfrutas.com.br"
+                >
+                  <svg class="icon"><use href="#icon-email"></use></svg>
+                  <small>E-mail</small>
                 </a>
               </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Boa Fruta Brasil"
-              data-segment="produtor beneficiamento"
-            >
-              <div class="associate-card__logo">
-                <img
-                  src="../assets/images/associados/boa-fruta.webp"
-                  alt="Logo Boa Fruta Brasil"
-                  width="1254"
-                  height="1254"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Boa Fruta Brasil</h2>
-              <p>Produção e comercialização de mamão e frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Caliman"
-              data-segment="produtor exportador"
-            >
-              <div class="associate-card__logo">
-                <img
-                  src="../assets/images/associados/caliman.webp"
-                  alt="Logo Caliman"
-                  width="2000"
-                  height="1010"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Caliman</h2>
-              <p>Produção e exportação de mamão formosa.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
             </article>
             <article
               class="associate-card"
@@ -384,271 +303,100 @@
             >
               <div class="associate-card__logo">
                 <img
-                  src="../assets/images/associados/docefruit.webp"
+                  src="../assets/images/associados/docefruit-atual.webp"
                   alt="Logo Doce Fruit"
-                  width="1774"
-                  height="887"
+                  width="1600"
+                  height="667"
                   loading="lazy"
                 />
               </div>
               <h2>Doce Fruit</h2>
-              <p>Produção e beneficiamento de mamão e frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Frutmel"
-              data-segment="produtor"
-            >
-              <div class="associate-card__logo">
-                <img
-                  src="../assets/images/associados/frutmel.webp"
-                  alt="Logo Frutmel"
-                  width="1254"
-                  height="1254"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Frutmel</h2>
-              <p>Produção de mamão e frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Frutas do Vale"
-              data-segment="produtor exportador"
-            >
-              <div class="associate-card__logo associate-card__logo--dark">
-                <img
-                  src="../assets/images/associados/frutas-do-vale.webp"
-                  alt="Logo Frutas do Vale"
-                  width="1254"
-                  height="1254"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Frutas do Vale</h2>
-              <p>Produção e exportação de mamão e frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Santana Frutas"
-              data-segment="produtor exportador"
-            >
-              <div class="associate-card__logo associate-card__logo--dark">
-                <img
-                  src="../assets/images/associados/santana-tropical-fruits.webp"
-                  alt="Logo Santana Frutas"
-                  width="2172"
-                  height="724"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Santana Frutas</h2>
-              <p>Produção e exportação de mamão e frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Tropical Brasil"
-              data-segment="exportador"
-            >
-              <div class="associate-card__logo">
-                <img
-                  src="../assets/images/associados/tropical-fruits.webp"
-                  alt="Logo Tropical Brasil"
-                  width="1683"
-                  height="935"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Tropical Brasil</h2>
-              <p>Comércio e exportação de frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-instagram"></use></svg>
-                  <small>Instagram</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-facebook"></use></svg>
-                  <small>Facebook</small>
-                </a>
-              </div>
-              <button type="button">Ver detalhes →</button>
-            </article>
-            <article
-              class="associate-card"
-              data-name="Vila Verde"
-              data-segment="produtor"
-            >
-              <div class="associate-card__logo">
-                <img
-                  src="../assets/images/associados/vila-verde.webp"
-                  alt="Logo Vila Verde"
-                  width="1774"
-                  height="887"
-                  loading="lazy"
-                />
-              </div>
-              <h2>Vila Verde</h2>
               <p>
-                Produção de mamão e frutas tropicais com foco em
-                sustentabilidade.
+                A Doce Fruit atua na produção e no beneficiamento de mamão e de
+                outras frutas tropicais, reunindo essas duas frentes em sua
+                operação.
               </p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
+              <div class="associate-card__links associate-card__links--three">
+                <a
+                  class="associate-card__link--instagram"
+                  href="https://www.instagram.com/docefruitexportacoes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram da Doce Fruit"
+                >
                   <svg class="icon"><use href="#icon-instagram"></use></svg>
                   <small>Instagram</small>
                 </a>
-                <a href="#">
+                <a
+                  class="associate-card__link--facebook"
+                  href="https://www.facebook.com/docefruitexportacoes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook da Doce Fruit"
+                >
                   <svg class="icon"><use href="#icon-facebook"></use></svg>
                   <small>Facebook</small>
                 </a>
+                <a
+                  class="associate-card__link--email"
+                  href="mailto:info@docefruit.com"
+                  aria-label="E-mail da Doce Fruit: info@docefruit.com"
+                >
+                  <svg class="icon"><use href="#icon-email"></use></svg>
+                  <small>E-mail</small>
+                </a>
               </div>
-              <button type="button">Ver detalhes →</button>
             </article>
             <article
               class="associate-card"
-              data-name="Alvorada Frutas"
+              data-name="UGBP"
               data-segment="produtor exportador"
             >
               <div class="associate-card__logo">
                 <img
-                  src="../assets/images/associados/alvorada-frutas-tropicais.webp"
-                  alt="Logo Alvorada Frutas"
-                  width="1774"
-                  height="887"
+                  src="../assets/images/associados/ugbp-atual.webp"
+                  alt="Logo UGBP"
+                  width="1600"
+                  height="535"
                   loading="lazy"
                 />
               </div>
-              <h2>Alvorada Frutas</h2>
-              <p>Produção e exportação de mamão e frutas tropicais.</p>
-              <div class="associate-card__links">
-                <a href="#">
-                  <svg class="icon"><use href="#icon-message"></use></svg>
-                  <small>WhatsApp</small>
-                </a>
-                <a href="#">
-                  <svg class="icon"><use href="#icon-globe"></use></svg>
-                  <small>Site</small>
-                </a>
-                <a href="#">
+              <h2>UGBP</h2>
+              <p>
+                Há mais de 20 anos, produz e exporta mamão e outras frutas com
+                sustentabilidade, qualidade certificada e estrutura própria.
+              </p>
+              <div class="associate-card__links associate-card__links--three">
+                <a
+                  class="associate-card__link--instagram"
+                  href="https://www.instagram.com/ugbp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram da UGBP"
+                >
                   <svg class="icon"><use href="#icon-instagram"></use></svg>
                   <small>Instagram</small>
                 </a>
-                <a href="#">
+                <a
+                  class="associate-card__link--facebook"
+                  href="https://www.facebook.com/ugbp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook da UGBP"
+                >
                   <svg class="icon"><use href="#icon-facebook"></use></svg>
                   <small>Facebook</small>
                 </a>
+                <a
+                  class="associate-card__link--email"
+                  href="mailto:info@ugbp.com"
+                  aria-label="E-mail da UGBP: info@ugbp.com"
+                >
+                  <svg class="icon"><use href="#icon-email"></use></svg>
+                  <small>E-mail</small>
+                </a>
               </div>
-              <button type="button">Ver detalhes →</button>
             </article>
-            <aside class="join-card">
-              <span aria-hidden="true">
-                <svg class="icon"><use href="#icon-users"></use></svg>
-              </span>
-              <p class="join-card__kicker">Novos associados</p>
-              <h2>Sua empresa também pode fazer parte da BRAPEX</h2>
-              <p>Junte-se a nós e fortaleça a cadeia produtiva do mamão.</p>
-              <div class="join-card__benefits" aria-label="Benefícios de ser associado">
-                <span>Representatividade</span>
-                <span>Mercado</span>
-                <span>Conexões</span>
-              </div>
-              <a class="button button--green" href="../index.html#contato">
-                Seja um associado
-                <svg class="icon"><use href="#icon-arrow-right"></use></svg>
-              </a>
-            </aside>
           </div>
           <p class="empty-state" hidden data-empty-state>
             Nenhum associado encontrado com esses filtros.
@@ -683,7 +431,8 @@
             <a href="../index.html#sobre">Sobre a BRAPEX</a>
             <a href="associados.html">Associados</a>
             <a href="../index.html#cotacao">Cotação atual</a>
-            <a href="../index.html#eventos">Eventos</a>
+            <a href="../index.html#gestao">Gestão</a>
+            <a href="../index.html#contato">Contato</a>
           </nav>
         </div>
         <div class="footer__column footer__contact">

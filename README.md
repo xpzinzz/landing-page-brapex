@@ -18,4 +18,4 @@ Abra `index.html` diretamente ou use um servidor local:
 npx serve .
 ```
 
-Os valores de cotação exibidos correspondem ao fechamento de 18/09/2026 informado pela fonte indicada na própria página.
+A cotação de Mamão - Ceasas é carregada automaticamente pelo widget oficial do Notícias Agrícolas.
