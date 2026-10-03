@@ -33,7 +33,14 @@ if (menuToggle && menu) {
     link.addEventListener("click", closeMenu),
   );
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) closeMenu();
+    const breakpoint = Number(menuToggle.dataset.menuBreakpoint) || 900;
+    if (window.innerWidth > breakpoint) closeMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.classList.contains("is-open")) {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
 }
 

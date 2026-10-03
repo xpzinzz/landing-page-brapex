@@ -15,6 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/diretoria.css" />
   <script defer src="scripts/main.js"></script>
 </head>
 
@@ -120,7 +121,7 @@
   </svg>
 
   <!-- Cabeçalho -->
-  <header class="site-header" data-header>
+  <header class="site-header site-header--extended" data-header>
     <div class="container header__inner">
       <a class="brand" href="index.html" aria-label="BRAPEX, página inicial">
         <img
@@ -139,7 +140,7 @@
           aria-hidden="true"
         />
       </a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle data-menu-breakpoint="1100">
         <span></span>
         <span></span>
         <span></span>
@@ -152,6 +153,7 @@
         <a href="#cotacao">Cotação</a>
         <a href="#gestao">Gestão</a>
         <a href="#contato">Contato</a>
+        <a href="pages/diretoria.html">Diretoria</a>
         <a href="pages/associados.html">Associados</a>
       </nav>
     </div>
@@ -319,6 +321,10 @@
             <span>Juntos por um<br><strong>futuro melhor</strong></span>
             <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
           </div>
+          <a class="management-policy__board-link" href="pages/diretoria.html">
+            Conheça nossa diretoria
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          </a>
         </header>
 
         <div class="management-policy__stack">
@@ -475,6 +481,7 @@
           <a href="pages/associados.html">Associados</a>
           <a href="#cotacao">Cotação atual</a>
           <a href="#gestao">Gestão</a>
+          <a href="pages/diretoria.html">Diretoria</a>
           <a href="#contato">Contato</a>
         </nav>
       </div>
