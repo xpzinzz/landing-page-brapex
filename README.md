@@ -7,8 +7,11 @@ Landing page responsiva da Associação Brasileira dos Produtores e Exportadores
 - `index.html`: página inicial
 - `pages/associados.html`: página de associados
 - `pages/diretoria.html`: diretoria e conselho fiscal da gestão 2025–2027
+- `pages/politica-de-privacidade.html`: política de privacidade
+- `pages/termos-de-uso.html`: termos de uso
 - `styles/main.css`: estilos compartilhados
 - `styles/diretoria.css`: página da diretoria e navegação ampliada
+- `styles/legal.css`: apresentação e leitura dos documentos legais
 - `scripts/main.js`: interações e filtros
 - `assets/images/`: imagens otimizadas em WebP
 
@@ -41,3 +44,12 @@ avaliação. A geração usou a ferramenta integrada de imagens, com o briefing:
 de 4 colunas e 3 linhas, fundo claro em tom de sálvia, roupas sociais em verde e
 azul, sem texto, bordas ou marcas; rostos distintos e enquadramento do peito para cima.”
 O prompt completo está em `assets/images/diretoria/geracao-retratos.txt`.
+
+## Política de Privacidade e Termos de Uso
+
+As duas páginas possuem links no rodapé de todas as páginas e um índice de seções.
+Os textos seguem o conteúdo fornecido em 06/10/2026. O início da política, que
+veio cortado na mensagem, foi recuperado do texto da BRAPEX já gerado na aba
+aberta de `https://politicaprivacidade.com/`, com a mesma data de vigência.
+Para editar o conteúdo, altere as seções em `pages/politica-de-privacidade.html`
+e `pages/termos-de-uso.html` e mantenha os links dos respectivos índices.

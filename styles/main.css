@@ -2476,6 +2476,30 @@ button {
   gap: 2px;
 }
 
+/* Links para privacidade e termos */
+
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 10px;
+  padding-bottom: 12px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer__legal a {
+  padding-block: 4px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-underline-offset: 4px;
+}
+
+.footer__legal a:hover,
+.footer__legal a[aria-current="page"] {
+  color: var(--gold);
+  text-decoration-color: currentColor;
+}
+
 .footer__dev-credit {
   display: flex;
   align-items: center;
