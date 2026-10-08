@@ -181,24 +181,6 @@ if (form) {
   });
 }
 
-// Cadastro na BRAPEX News
-
-const newsletterForm = select("[data-newsletter-form]");
-if (newsletterForm) {
-  newsletterForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const status = select("[data-newsletter-status]");
-
-    if (!newsletterForm.checkValidity()) {
-      newsletterForm.reportValidity();
-      return;
-    }
-
-    status.textContent = "Obrigado pelo interesse na BRAPEX News!";
-    newsletterForm.reset();
-  });
-}
-
 // Busca e filtro da página de associados
 
 const associateSearch = select("[data-associate-search]");

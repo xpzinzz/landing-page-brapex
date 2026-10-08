@@ -2920,6 +2920,12 @@ button {
   background: linear-gradient(135deg, #833ab4, #fd1d1d 52%, #fcb045);
 }
 
+.associate-card__links a.associate-card__link--site .icon {
+  fill: none;
+  stroke: currentColor;
+  background: #176b87;
+}
+
 .associate-card__links a.associate-card__link--facebook .icon {
   fill: none;
   stroke: currentColor;
@@ -4021,7 +4027,7 @@ button {
 
 .contact-hub__grid {
   display: grid;
-  grid-template-columns: 1.05fr 1.08fr 0.78fr 1.05fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 1fr);
   align-items: center;
   gap: 18px;
 }
@@ -4185,6 +4191,10 @@ button {
 @media (max-width: 1200px) {
   .contact-hub__grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-hub__card {
+    grid-column: 1 / -1;
   }
 
   .contact-hub__social,
