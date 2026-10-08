@@ -2464,6 +2464,7 @@ button {
   justify-content: space-between;
   gap: 24px;
   min-height: 78px;
+  padding-block: 18px;
 }
 
 .footer__bottom p {
@@ -2483,7 +2484,6 @@ button {
   flex-wrap: wrap;
   gap: 8px 20px;
   margin-top: 10px;
-  padding-bottom: 12px;
   color: rgba(255, 255, 255, 0.82);
 }
 
