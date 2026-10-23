@@ -108,8 +108,28 @@
 }
 
 .board-sections a span {
+  display: grid;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  place-items: center;
   color: var(--green-700);
-  font-size: 1.2rem;
+  background: rgba(3, 45, 36, 0.06);
+  border-radius: 50%;
+}
+
+.board-sections a span svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.board-sections a:is(:hover, :focus-visible) span {
+  color: #fff;
+  background: var(--green-700);
 }
 
 .board-sections a:hover {
@@ -305,6 +325,14 @@
   object-position: center top;
 }
 
+.director-card__portrait img.director-card__photo--georgina {
+  object-position: center 85%;
+}
+
+.director-card__portrait img.director-card__photo--anizio {
+  object-position: center 20%;
+}
+
 .director-card__image-note {
   position: absolute;
   bottom: 12px;
@@ -412,40 +440,119 @@
 }
 
 @media (max-width: 1100px) {
+  .site-header--extended {
+    background: rgba(3, 45, 36, 0.88);
+  }
+
+  .site-header--extended.is-scrolled {
+    background: rgba(255, 255, 255, 0.99);
+  }
+
   .site-header--extended .menu-toggle {
     display: block;
+    position: relative;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .site-header--extended .menu-toggle span {
+    position: absolute;
+    left: 11px;
+    top: 20px;
+    width: 20px;
+    height: 2px;
+    margin: 0;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .site-header--extended .menu-toggle span:first-child {
+    transform: translateY(-6px);
+  }
+
+  .site-header--extended .menu-toggle span:last-child {
+    transform: translateY(6px);
+  }
+
+  .site-header--extended .menu-toggle[aria-expanded="true"] span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .site-header--extended .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header--extended .menu-toggle[aria-expanded="true"] span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .site-header--extended.is-scrolled .menu-toggle {
+    background: var(--green-100);
+    border-color: var(--line);
   }
 
   .site-header--extended .main-nav {
-    position: fixed;
-    inset: 76px 0 auto;
+    position: absolute;
+    inset: calc(100% + 10px) 16px auto;
     display: grid;
-    gap: 0;
-    max-height: calc(100dvh - 76px);
-    padding: 18px 20px;
+    gap: 4px;
+    max-height: calc(100dvh - 110px);
+    padding: 14px;
     overflow-y: auto;
     visibility: hidden;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 20px 35px rgba(3, 45, 36, 0.16);
-    transform: translateY(-140%);
-    transition: transform 0.3s ease, visibility 0.3s ease;
+    background: var(--green-950);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(3, 45, 36, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
   }
 
   .site-header--extended .main-nav.is-open {
     visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
   .site-header--extended .main-nav a {
-    padding: 12px 10px;
-    color: var(--green-900);
-    border-bottom: 1px solid var(--line);
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 12px 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    font-size: 0.95rem;
     text-shadow: none;
   }
 
-  .site-header--extended .main-nav a.is-active {
-    color: var(--green-700);
+  .site-header--extended .main-nav a.is-active,
+  .site-header--extended .main-nav a:hover,
+  .site-header--extended .main-nav a:focus-visible {
+    color: var(--gold);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .site-header--extended .main-nav a::before {
+    content: "";
+    order: 1;
+    width: 7px;
+    height: 7px;
+    margin-left: 16px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    opacity: 0.6;
   }
 
   .site-header--extended .main-nav a::after {
@@ -526,14 +633,22 @@
     font-size: 0.9rem;
   }
 
-  .board-sections a {
-    padding: 17px 10px;
-    font-size: 0.7rem;
-    line-height: 1.4;
+  .board-sections .container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding-block: 16px;
   }
 
-  .board-sections a span {
-    display: none;
+  .board-sections a,
+  .board-sections a:first-child,
+  .board-sections a:last-child {
+    min-height: 48px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .president-card,

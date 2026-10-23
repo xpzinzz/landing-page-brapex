@@ -32,6 +32,11 @@ if (menuToggle && menu) {
   selectAll("a", menu).forEach((link) =>
     link.addEventListener("click", closeMenu),
   );
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+      closeMenu();
+    }
+  });
   window.addEventListener("resize", () => {
     const breakpoint = Number(menuToggle.dataset.menuBreakpoint) || 900;
     if (window.innerWidth > breakpoint) closeMenu();
